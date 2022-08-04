@@ -1,6 +1,8 @@
 package model;
 
-public class PartTime extends Staff{
+import java.io.Serializable;
+
+public class PartTime extends Staff implements Serializable {
 //    Thời gian làm việc
     private double time;
     // tiền phạt vi phạm

@@ -1,6 +1,8 @@
 package model;
 
-public class FullTimeStaff extends Staff {
+import java.io.Serializable;
+
+public class FullTimeStaff extends Staff implements Serializable {
 //    ngày công
     private int workingDay;
 //    Thâm niên

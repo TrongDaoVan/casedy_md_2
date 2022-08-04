@@ -1,6 +1,8 @@
 package model;
 
-public class HeadOfDepartment extends Staff{
+import java.io.Serializable;
+
+public class HeadOfDepartment extends Staff implements Serializable {
 //    Bộ phận nào
     private String part;
 //    Lương cứng
@@ -11,10 +13,8 @@ public class HeadOfDepartment extends Staff{
 
     @Override
     public float totalSalary() {
-//        Giá trách nhiệm
-        int responsibilityPrice = 200;
         float sum = 0;
-        sum = (float) (hardSalary + rank * responsibilityPrice);
+        sum = (float) (hardSalary + rank * CONSTANT);
         return sum;
     }
 

@@ -1,6 +1,8 @@
 package model;
 
-public abstract class Staff {
+import java.io.Serializable;
+
+public abstract class Staff implements Serializable {
     private int id;
     private String name;
 //    giới tính
