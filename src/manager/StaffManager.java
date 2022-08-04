@@ -15,6 +15,14 @@ import java.util.Scanner;
 public class StaffManager {
     public static List<Staff> arr = new ArrayList<>();
 
+//    Tính lương nhân viên
+    public void sumTotalSalary(List<Staff> arr) {
+        for (int i = 0; i < arr.size(); i++) {
+            System.out.println(arr.get(i).getName() + " = " + arr.get(i).totalSalary() + " USD");
+        }
+    }
+
+
     //    Thêm 1 nhân viên FullTime
     public void addFullTime() {
         Scanner scanner = new Scanner(System.in);
@@ -28,13 +36,7 @@ public class StaffManager {
         System.out.println("Nhập tuổi: ");
         int age = scanner.nextInt();
         System.out.println("Trạng thái: ");
-        String status1 = scanner1.nextLine();
-        boolean status;
-        if ("true".equals(status1)) {
-            status = true;
-        } else {
-            status = false;
-        }
+        String status = scanner1.nextLine();
         System.out.println("Nhập ngày công: ");
         int workingDay = scanner.nextInt();
         System.out.println("Nhập thâm niên: ");
@@ -57,17 +59,11 @@ public class StaffManager {
         int age = scanner.nextInt();
         System.out.println("Trạng thái: ");
         String status1 = scanner1.nextLine();
-        boolean status;
-        if ("true".equals(status1)) {
-            status = true;
-        } else {
-            status = false;
-        }
         System.out.println("Thời gian làm việc: ");
         double time = scanner.nextDouble();
         System.out.println("Tiền vi phạm: ");
         int fines = scanner.nextInt();
-        PartTime add = new PartTime(id, name, gender, age, status, time, fines);
+        PartTime add = new PartTime(id, name, gender, age, status1, time, fines);
         arr.add(add);
     }
 
@@ -84,20 +80,14 @@ public class StaffManager {
         System.out.println("Nhập tuổi: ");
         int age = scanner.nextInt();
         System.out.println("Trạng thái: ");
-        String status1 = scanner1.nextLine();
-        boolean status;
-        if ("true".equals(status1)) {
-            status = true;
-        } else {
-            status = false;
-        }
+        String status2 = scanner1.nextLine();
         System.out.println("Tên bộ phận bạn muốn bổ nhiệm: ");
         String part = scanner1.nextLine();
         System.out.println("Lương cứng: ");
         int hardSalary = scanner.nextInt();
         System.out.println("Cấp bậc trách nhiệm: ");
         double rank = scanner.nextDouble();
-        HeadOfDepartment add = new HeadOfDepartment(id, name, gender, age, status, part, hardSalary, rank);
+        HeadOfDepartment add = new HeadOfDepartment(id, name, gender, age, status2, part, hardSalary, rank);
         arr.add(add);
     }
 
@@ -143,13 +133,7 @@ public class StaffManager {
                     case 5:
                         System.out.println("Nhập trạng thái mới: ");
                         String status1 = scannerx.nextLine();
-                        boolean status;
-                        if ("true".equals(status1)) {
-                            status = true;
-                        } else {
-                            status = false;
-                        }
-                        arr.get(i).setStatus(status);
+                        arr.get(i).setStatus(status1);
                         break;
                     case 6:
                         System.out.println("Nhập ngày công mới:");
@@ -201,13 +185,7 @@ public class StaffManager {
                     case 5:
                         System.out.println("Nhập trạng thái mới: ");
                         String status2 = scannery.nextLine();
-                        boolean status;
-                        if ("true".equals(status2)) {
-                            status = true;
-                        } else {
-                            status = false;
-                        }
-                        arr.get(i).setStatus(status);
+                        arr.get(i).setStatus(status2);
                         break;
                     case 6:
                         System.out.println("Nhập thời gian làm mới: ");
@@ -260,13 +238,7 @@ public class StaffManager {
                     case 5:
                         System.out.println("Nhập trạng thái mới: ");
                         String status3 = scannerz.nextLine();
-                        boolean status;
-                        if ("true".equals(status3)) {
-                            status = true;
-                        } else {
-                            status = false;
-                        }
-                        arr.get(i).setStatus(status);
+                        arr.get(i).setStatus(status3);
                         break;
                     case 6:
                         System.out.println("Nhập tên bộ phận mới: ");
@@ -316,14 +288,30 @@ public class StaffManager {
     }
 
 //    Hiển thị trạng thái của nhân viên
-    public boolean statusDisplay(List<Staff> arr, String name){
+    public void statusDisplay(List<Staff> arr, String name){
         boolean khoQua = false;
         for (int i = 0; i < arr.size(); i++) {
             if (arr.get(i).getName().equals(name)) {
-                System.out.println(arr.get(i).isStatus());
+                System.out.println(arr.get(i).getStatus());
                 khoQua=true;
                 break;
             }
-        }return khoQua;
+        }
+        if (khoQua == false) {
+            System.out.println("Không tìm thấy tên nhân viên đó.");
+        }
     }
+
+//    Thay đổi trạng thái nhân viên
+    public void changeStatus(List<Staff> arr, String name){
+        for (int i = 0; i < arr.size(); i++) {
+            if(arr.get(i).getName().equals(name)) {
+                System.out.println("Nhập trạng thái mới: ");
+                Scanner scanner = new Scanner(System.in);
+                String newState = scanner.nextLine();
+                arr.get(i).setStatus(newState);
+            }
+        }
+    }
+
 }

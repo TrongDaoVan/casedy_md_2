@@ -11,14 +11,14 @@ public class PartTime extends Staff{
 //        Lương tính theo giờ
         int hourlySalary = 2;
         float sum = 0;
-        sum = (float) (this.time * hourlySalary - this.fines);
+        sum = (float) (time * hourlySalary - fines);
         return sum;
     }
 
     public PartTime() {
     }
 
-    public PartTime(int id, String name, String gender, int age, boolean status, double time, int fines) {
+    public PartTime(int id, String name, String gender, int age, String status, double time, int fines) {
         super(id, name, gender, age, status);
         this.time = time;
         this.fines = fines;
@@ -43,8 +43,8 @@ public class PartTime extends Staff{
     @Override
     public String toString() {
         return "PartTime{" +
-                "time=" + time +
-                ", fines=" + fines +
+                "Số giờ làm =" + time +
+                ", Tiền phạt =" + fines +
                 '}' + super.toString();
     }
 }

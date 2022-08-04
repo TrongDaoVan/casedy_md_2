@@ -14,14 +14,14 @@ public class HeadOfDepartment extends Staff{
 //        Giá trách nhiệm
         int responsibilityPrice = 200;
         float sum = 0;
-        sum = (float) (this.hardSalary + this.rank * responsibilityPrice);
+        sum = (float) (hardSalary + rank * responsibilityPrice);
         return sum;
     }
 
     public HeadOfDepartment() {
     }
 
-    public HeadOfDepartment(int id, String name, String gender, int age, boolean status, String part, int hardSalary, double rank) {
+    public HeadOfDepartment(int id, String name, String gender, int age, String status, String part, int hardSalary, double rank) {
         super(id, name, gender, age, status);
         this.part = part;
         this.hardSalary = hardSalary;
@@ -59,9 +59,9 @@ public class HeadOfDepartment extends Staff{
     @Override
     public String toString() {
         return "HeadOfDepartment{" +
-                "part='" + part + '\'' +
-                ", hardSalary=" + hardSalary +
-                ", rank=" + rank +
+                "Tên bộ phận làm việc ='" + part + '\'' +
+                ", Lương Cứng =" + hardSalary +
+                ", Cấp bậc trách nhiệm =" + rank +
                 '}' + super.toString();
     }
 }

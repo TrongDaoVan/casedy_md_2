@@ -7,14 +7,14 @@ public abstract class Staff {
     private String gender;
     private int age;
     //    trạng thái công việc
-    private boolean status;
+    private String status;
 
     public abstract float totalSalary();
 
     public Staff() {
     }
 
-    public Staff(int id, String name, String gender, int age, boolean status) {
+    public Staff(int id, String name, String gender, int age, String status) {
         this.id = id;
         this.name = name;
         this.gender = gender;
@@ -54,11 +54,11 @@ public abstract class Staff {
         this.age = age;
     }
 
-    public boolean isStatus() {
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(boolean status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 
@@ -66,10 +66,10 @@ public abstract class Staff {
     public String toString() {
         return "Staff{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
-                ", gender='" + gender + '\'' +
-                ", age=" + age +
-                ", Status=" + status +
+                ", Tên ='" + name + '\'' +
+                ", Giới tính ='" + gender + '\'' +
+                ", Tuổi =" + age +
+                ", Trạng thái làm việc =" + status +
                 '}';
     }
 }

@@ -15,8 +15,10 @@ public class FullTimeStaff extends Staff {
 //        Tiền lương tính theo ngày
         int salaryInADay = 20;
         float sum = 0;
-        if (this.workingDay == 26) {
-            sum = (float) (this.workingDay * salaryInADay + this.seniority * moneyLevel + attendanceBonus);
+        if (workingDay > 22) {
+            sum = (float) (workingDay * salaryInADay + seniority * moneyLevel + attendanceBonus);
+        } else {
+            sum = (float) (workingDay * salaryInADay + seniority * moneyLevel);
         }
         return sum;
     }
@@ -24,7 +26,7 @@ public class FullTimeStaff extends Staff {
     public FullTimeStaff() {
     }
 
-    public FullTimeStaff(int id, String name, String gender, int age, boolean status, int workingDay, double seniority) {
+    public FullTimeStaff(int id, String name, String gender, int age, String status, int workingDay, double seniority) {
         super(id, name, gender, age, status);
         this.workingDay = workingDay;
         this.seniority = seniority;
@@ -49,8 +51,8 @@ public class FullTimeStaff extends Staff {
     @Override
     public String toString() {
         return "FullTimeStaff{" +
-                "workingDay=" + workingDay +
-                ", seniority=" + seniority +
+                "Ngày Công =" + workingDay +
+                ", Thâm niên =" + seniority +
                 '}'+ super.toString();
     }
 }
