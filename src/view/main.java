@@ -9,6 +9,7 @@ import model.PartTime;
 import model.Staff;
 import storage.GhiFile;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -168,8 +169,18 @@ public class main {
                         System.out.println("Mời bạn nhập tên nhân viên muốn sửa: ");
                         String name3 = scanner1.nextLine();
                         object.editInformation(arr, name3);
+                        List<String> abc = new ArrayList<>();
                         for (int i = 0; i < arr.size(); i++) {
-                            System.out.println(arr.get(i));
+                            abc.add(arr.get(i).getName());
+                        }
+                        if (abc.contains(name3)){
+                            for (int i = 0; i < arr.size(); i++) {
+                                if(arr.get(i).getName().equals(name3)) {
+                                    System.out.println(arr.get(i));
+                                }
+                            }
+                        } else {
+                            System.out.println("KO có th này");
                         }
                         break;
                     case 10:

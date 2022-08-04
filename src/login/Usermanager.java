@@ -1,5 +1,6 @@
 package login;
 
+import javax.jws.soap.SOAPBinding;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -20,7 +21,7 @@ public class Usermanager {
 
     }
     public boolean validateTk(String regex) {
-        Pattern pattern = Pattern.compile("^[a-zA-Z0-9]{1,6}@gmail.com$");
+        Pattern pattern = Pattern.compile("^[a-zA-Z0-9]{1,6}$");
         Matcher matcher = pattern.matcher(regex);
         return matcher.matches();
     }

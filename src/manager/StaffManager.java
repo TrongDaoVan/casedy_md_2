@@ -301,13 +301,10 @@ public class StaffManager {
                             ((HeadOfDepartment) arr.get(i)).setRank(rank);
                             break;
                     }
-                } else {
-                    throw new Exception("khong co nhan vien nay");
                 }
-
             }
         }catch (Exception e){
-            throw new Exception(e.getMessage());
+            System.out.println("Không có nv này");
         }
 
     }
