@@ -8,8 +8,10 @@ public class PartTime extends Staff{
 
     @Override
     public float totalSalary() {
+//        Lương tính theo giờ
+        int hourlySalary = 2;
         float sum = 0;
-        sum = (float) (this.time * 2 - this.fines);
+        sum = (float) (this.time * hourlySalary - this.fines);
         return sum;
     }
 
@@ -30,8 +32,8 @@ public class PartTime extends Staff{
         this.time = time;
     }
 
-    public int getFines() {
-        return fines;
+    public int getFines(int fines) {
+        return this.fines;
     }
 
     public void setFines(int fines) {

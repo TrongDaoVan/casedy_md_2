@@ -11,8 +11,10 @@ public class HeadOfDepartment extends Staff{
 
     @Override
     public float totalSalary() {
+//        Giá trách nhiệm
+        int responsibilityPrice = 200;
         float sum = 0;
-        sum = (float) (this.hardSalary + this.rank * 200);
+        sum = (float) (this.hardSalary + this.rank * responsibilityPrice);
         return sum;
     }
 

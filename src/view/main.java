@@ -56,10 +56,30 @@ public class main {
 //        for (int i = 0; i < arr.size(); i++) {
 //            System.out.println(arr.get(i));
 //        }
-//
-        object.addHeadOfDepartment();
-        for (int i = 0; i < arr.size(); i++) {
-            System.out.println(arr.get(i));
-        }
+
+
+//      thêm trưởng phòng
+//        object.addHeadOfDepartment();
+//        for (int i = 0; i < arr.size(); i++) {
+//            System.out.println(arr.get(i));
+//        }
+
+//        sửa các chỉ số
+//       object.editInformation(arr, "Châu Tấn");
+//        for (int i = 0; i < arr.size(); i++) {
+//            System.out.println(arr.get(i));
+//        }
+
+//        xóa nhân viên
+//        object.deleteStaff(arr, "Châu Tấn");
+//        for (int i = 0; i < arr.size(); i++) {
+//            System.out.println(arr.get(i));
+//        }
+
+//        Tìm kiếm nhân viên
+//        object.search(arr, "Châu Tấn");
+
+        object.statusDisplay(arr, "trọng");
+
     }
 }

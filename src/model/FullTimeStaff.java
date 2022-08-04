@@ -8,9 +8,15 @@ public class FullTimeStaff extends Staff {
 
     @Override
     public float totalSalary() {
+//        Thưởng chuyên cần
+        int attendanceBonus = 50;
+//        tiền thưởng thâm niên/năm
+        int moneyLevel = 40;
+//        Tiền lương tính theo ngày
+        int salaryInADay = 20;
         float sum = 0;
         if (this.workingDay == 26) {
-            sum = (float) (this.workingDay * 20 + this.seniority * 40 + 50);
+            sum = (float) (this.workingDay * salaryInADay + this.seniority * moneyLevel + attendanceBonus);
         }
         return sum;
     }
