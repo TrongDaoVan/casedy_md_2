@@ -32,7 +32,7 @@ public class PartTime extends Staff{
         this.time = time;
     }
 
-    public int getFines(int fines) {
+    public int getFines() {
         return this.fines;
     }
 

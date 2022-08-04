@@ -59,8 +59,8 @@ public class main {
     System.out.println("8 - Thay đổi trạng thái nhân viên");
     System.out.println("9 - Sửa thông tin nhân viên");
     System.out.println("10 - Đuổi việc nhân viên");
-    System.out.println("*****-NƠI QUY TỤ NGÔI SAO HẠNG A-*****");
-    System.out.println("**************************************");
+    System.out.println("*****-NƠI NGÔI SAO HẠNG A LÀM VIỆC-*****");
+    System.out.println("****************************************");
     try {
         Scanner scanner = new Scanner(System.in);
         Scanner scanner1 = new Scanner(System.in);
@@ -131,7 +131,7 @@ public class main {
                 }
                 break;
             case 0:
-                System.out.printf("Thoát khỏi trương trình");
+                System.out.printf("Thoát khỏi chương trình");
                 return;
             default:
                 System.out.println("Nhập ngu qua mời bạn nhập lại");
