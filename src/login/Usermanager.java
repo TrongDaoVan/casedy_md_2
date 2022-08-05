@@ -21,12 +21,12 @@ public class Usermanager {
 
     }
     public boolean validateTk(String regex) {
-        Pattern pattern = Pattern.compile("^[a-zA-Z0-9]{1,6}$");
+        Pattern pattern = Pattern.compile("^[a-zA-Z0-9]{1,9}@gmail.com$");
         Matcher matcher = pattern.matcher(regex);
         return matcher.matches();
     }
     public boolean validateMk(String regex) {
-        Pattern pattern = Pattern.compile("^[a-zA-Z0-9]{1,6}$");
+        Pattern pattern = Pattern.compile("^[a-zA-Z0-9]{1,8}$");
         Matcher matcher = pattern.matcher(regex);
         return matcher.matches();
     }

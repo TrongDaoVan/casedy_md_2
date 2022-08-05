@@ -180,7 +180,7 @@ public class main {
                                 }
                             }
                         } else {
-                            System.out.println("KO có th này");
+                            System.out.println("KO có nhân viên này");
                         }
                         break;
                     case 10:
